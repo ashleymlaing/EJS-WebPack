@@ -10,7 +10,7 @@
 // document.body.appendChild(component())
 
 import _ from 'lodash'
-import printMe from './print.js'
+// import printMe from './print.js'
 import start from './print.js'
 import stop from './print.js'
 import './style.css'
