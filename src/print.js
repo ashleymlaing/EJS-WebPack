@@ -5,7 +5,7 @@
 var interval = null
 var turns = 0
 
-export default function stop() {
+export function stop() {
     clearInterval(interval)
 }
 

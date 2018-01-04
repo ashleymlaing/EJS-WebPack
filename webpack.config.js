@@ -43,6 +43,15 @@ module.exports = {
         path: path.resolve(__dirname, 'dist')
     },
     module: {
+        // preLoaders: [
+        //     // Javascript
+        //     { test: /\.jsx?$/, loader: 'eslint', exclude: /node_modules/ }
+        // ],
+        loaders: [{
+            test: /\.js$/,
+            exclude: /node_modules/,
+            loader: "eslint-loader",
+        }],
         rules: [{
                 test: /\.css$/,
                 use: [
@@ -74,6 +83,10 @@ module.exports = {
             //          'xml-loader'
             //        ]
             //      }
+            eslint: {
+                failOnWarning: false,
+                failOnError: true
+            },
         ]
     }
 }
