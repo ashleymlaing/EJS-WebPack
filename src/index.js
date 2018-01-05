@@ -28,10 +28,10 @@ function component() {
     // element.innerHTML = _.join(['Hello', 'webpack'], ' ')
 
     btn.innerHTML = 'Start'
-    btn.onclick = start
+    btn.onclick = start()
 
     btn2.innerHTML = 'Stop'
-    btn2.onclick = stop
+    btn2.onclick = stop()
 
     element.appendChild(btn)
     element.appendChild(btn2)

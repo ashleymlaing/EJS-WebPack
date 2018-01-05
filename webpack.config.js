@@ -83,10 +83,11 @@ module.exports = {
             //          'xml-loader'
             //        ]
             //      }
-            eslint: {
-                failOnWarning: false,
-                failOnError: true
-            },
-        ]
+
+        ],
+        eslint: {
+            failOnWarning: false,
+            failOnError: true
+        },
     }
 }
