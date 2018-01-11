@@ -2,29 +2,6 @@
 //     console.log('I get called from print.js!')
 // }
 
-var interval = null
-var turns = 0
-
-export function stop() {
-    clearInterval(interval)
-}
-
-export default function start() {
-    interval = setInterval(function() {
-        animalKingdom.turn()
-        turns++
-        document.getElementsByTagName('section')[0].innerHTML = '<pre>' + animalKingdom + '</pre>' + '<p>Turns:  <span>' + turns + '</span></p>' + '<p>Plants:  <span>' + plantCount + '</span></p>' + '<p>Tigers:  <span>' + tigerCount + '</span></p>' + '<p>PlantEaters:  <span>' + critterCount + '</span></p>'
-        if (
-            // turns >= 1000 ||
-            critterCount == 0 ||
-            plantCount == 0 ||
-            tigerCount == 0
-        ) {
-            clearInterval(interval)
-        }
-    }, 20)
-}
-
 var plan = [
     '###########################',
     '#      #    #      o     ##',
@@ -445,3 +422,26 @@ var animalKingdom = new LifelikeWorld(
         '*': Plant
     }
 )
+
+var interval = null
+var turns = 0
+
+export function stop() {
+    clearInterval(interval)
+}
+
+export default function start() {
+    interval = setInterval(function() {
+        animalKingdom.turn()
+        turns++
+        document.getElementsByTagName('section')[0].innerHTML = '<pre>' + animalKingdom + '</pre>' + '<p>Turns:  <span>' + turns + '</span></p>' + '<p>Plants:  <span>' + plantCount + '</span></p>' + '<p>Tigers:  <span>' + tigerCount + '</span></p>' + '<p>PlantEaters:  <span>' + critterCount + '</span></p>'
+        if (
+            // turns >= 1000 ||
+            critterCount == 0 ||
+            plantCount == 0 ||
+            tigerCount == 0
+        ) {
+            clearInterval(interval)
+        }
+    }, 20)
+}
