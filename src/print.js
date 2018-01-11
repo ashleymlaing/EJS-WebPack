@@ -13,7 +13,7 @@ export default function start() {
     interval = setInterval(function() {
         animalKingdom.turn()
         turns++
-        document.getElementsByTagName[0]('section').innerHTML = '<pre>' + animalKingdom + '</pre>' + '<p>Turns:  <span>' + turns + '</span></p>' + '<p>Plants:  <span>' + plantCount + '</span></p>' + '<p>Tigers:  <span>' + tigerCount + '</span></p>' + '<p>PlantEaters:  <span>' + critterCount + '</span></p>'
+        document.getElementsByTagName('section')[0].innerHTML = '<pre>' + animalKingdom + '</pre>' + '<p>Turns:  <span>' + turns + '</span></p>' + '<p>Plants:  <span>' + plantCount + '</span></p>' + '<p>Tigers:  <span>' + tigerCount + '</span></p>' + '<p>PlantEaters:  <span>' + critterCount + '</span></p>'
         if (
             // turns >= 1000 ||
             critterCount == 0 ||
