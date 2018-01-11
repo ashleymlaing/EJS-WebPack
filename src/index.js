@@ -22,7 +22,7 @@ function component() {
     var btn = document.createElement('button')
     var btn2 = document.createElement('button')
     var element2 = document.createElement('section')
-    var game - document.createElement('aside')
+    var game = document.createElement('aside')
 
     // Lodash, currently included via a script, is required for this line to work
     // Lodash, now imported by this script
